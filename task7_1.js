@@ -14,13 +14,14 @@ const post = "4 - ваша посылка";
 let postamat = [null, null, null, post, null];
 
 let codeFromUser = "A001DFX0";
+let index = post[0];
 if (codeFromUser == codeFromSMS) {
-  for (let value of postamat) {
-    if (value == post) {
-      balance -= 100;
-      console.log(
-        `Вы получили посылку из ячейки 4:  ${value}, и ваш счет составляет: ${balance} р.`
-      );
-    }
+  {
+    balance -= 100;
+    console.log(
+      `Вы получили посылку из ячейки 4:  ${
+        postamat[index - 1]
+      }, и ваш счет составляет: ${balance} р.`
+    );
   }
 } else console.log("SMS код неверный");
