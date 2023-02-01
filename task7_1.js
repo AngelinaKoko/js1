@@ -19,9 +19,7 @@ if (codeFromUser == codeFromSMS) {
   {
     balance -= 100;
     console.log(
-      `Вы получили посылку из ячейки 4:  ${
-        postamat[index - 1]
-      }, и ваш счет составляет: ${balance} р.`
+      `Вы получили посылку из ячейки : ${index} и ваш счет составляет: ${balance} р.`
     );
   }
 } else console.log("SMS код неверный");
