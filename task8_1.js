@@ -1,5 +1,7 @@
 const limit = 1000;
-const assertValue = 40590;
+const assertValue1 = 40590;
+const assertValue2 = 148200;
+const assertValue3 = 25709;
 
 countSum = (array) => {
   let sum = 0;
@@ -11,8 +13,12 @@ countSum = (array) => {
 
 testSum = (sum, aValue) => {
   return sum == aValue
-    ? console.log("Значение суммы совпадает с отчетным")
-    : console.log("Значение суммы не совпадает с отчетным");
+    ? console.log(
+        `Значение суммы ${sum} совпадает с тестовым значением ${aValue}`
+      )
+    : console.log(
+        `Значение суммы ${sum} не совпадает с тестовым значением ${aValue}`
+      );
 };
 
 let expencesExamples = [
@@ -33,7 +39,10 @@ let expencesExamples = [
   },
 ];
 
-expencesExamples.forEach((value) => {
+expencesExamples.forEach((value, index) => {
   let s = countSum(value.yearlyExpences);
-  testSum(s, assertValue);
+  console.log(`сумма по массиву ${index + 1}: ${s}`);
+  testSum(s, assertValue1);
+  testSum(s, assertValue2);
+  testSum(s, assertValue3);
 });
