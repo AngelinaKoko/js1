@@ -12,13 +12,10 @@ countSum = (array) => {
 };
 
 testSum = (sum, aValue) => {
-  return sum == aValue
-    ? console.log(
-        `Значение суммы ${sum} совпадает с тестовым значением ${aValue}`
-      )
-    : console.log(
-        `Значение суммы ${sum} не совпадает с тестовым значением ${aValue}`
-      );
+  if (sum == aValue)
+    console.log(
+      `Значение суммы ${sum} совпадает с тестовым значением ${aValue}`
+    );
 };
 
 let expencesExamples = [
